@@ -20,6 +20,7 @@ stages:
 
   - job: 'cleaning'
     steps:
+    - bash: ls
     - task: Maven@3
       inputs:
         mavenPomFile: 'pom.xml'
