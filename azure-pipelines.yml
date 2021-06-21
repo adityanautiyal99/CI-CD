@@ -12,7 +12,19 @@ pool:
 steps:
 - script: 
     git clone 'https://github.com/opstree/spring3hibernate.git'
-  displayName: 'Run a one-line script'
+  displayName: 'Cloning spring3hibernate'
+
+- task: Maven@3
+  inputs:
+    mavenPomFile: 'pom.xml'
+    goals: 'clean compile'
+    publishJUnitResults: true
+    testResultsFiles: '**/surefire-reports/TEST-*.xml'
+    javaHomeOption: 'JDKVersion'
+    mavenVersionOption: 'Default'
+    mavenAuthenticateFeed: false
+    effectivePomSkip: false
+    sonarQubeRunAnalysis: false
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
