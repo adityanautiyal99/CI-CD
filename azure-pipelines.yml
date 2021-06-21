@@ -24,7 +24,7 @@ stages:
     steps:
     - task: Maven@3
       inputs:
-        mavenPomFile: 'pom.xml'
+        mavenPomFile: 'spring3hibernate/pom.xml'
         goals: 'clean compile'
         publishJUnitResults: false
         javaHomeOption: 'JDKVersion'
