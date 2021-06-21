@@ -20,6 +20,9 @@ stages:
 
 - stage: secound
   jobs:
+  - job: check
+    steps:
+    - bash: ls
   - job: 'cleaning'
     steps:
     - task: Maven@3
