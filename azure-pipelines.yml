@@ -16,7 +16,10 @@ stages:
   - job: 'cloning'
     steps:
     - bash: git clone https://github.com/opstree/spring3hibernate.git
-    - bash:  echo ls
+    - bash: ls
+
+- stage: secound
+  jobs:
   - job: 'cleaning'
     steps:
     - task: Maven@3
