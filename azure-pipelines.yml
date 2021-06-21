@@ -17,10 +17,6 @@ stages:
     steps:
     - bash: git clone https://github.com/opstree/spring3hibernate.git
     - bash: cd spring3hibernate && ls
-
-  - job: 'cleaning'
-    steps:
-    - bash: ls
     - task: Maven@3
       inputs:
         mavenPomFile: 'pom.xml'
@@ -31,6 +27,10 @@ stages:
         mavenAuthenticateFeed: false
         effectivePomSkip: false
         sonarQubeRunAnalysis: false
+
+  # - job: 'cleaning'
+  #   steps:
+  #   - bash: ls
 
 # - stage: secound
 #   jobs:
