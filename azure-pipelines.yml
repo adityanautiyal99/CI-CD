@@ -16,7 +16,7 @@ stages:
   - job: 'cloning'
     steps:
     - bash: git clone https://github.com/opstree/spring3hibernate.git
-    - bash: ls
+    - bash: cd spring3hibernate && ls
 
 - stage: secound
   jobs:
