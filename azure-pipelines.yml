@@ -10,7 +10,8 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: git 'https://github.com/opstree/spring3hibernate.git'
+- script: 
+    git clone 'https://github.com/opstree/spring3hibernate.git'
   displayName: 'Run a one-line script'
 
 - script: |
