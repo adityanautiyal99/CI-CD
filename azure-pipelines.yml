@@ -10,7 +10,8 @@ pool:
   vmImage: ubuntu-latest
 
 stages:
-- stage : cloning springhibernate
+- stage : first
+  displayName: cloning spring3hibernate
   jobs:
   - job: cloning
     steps:
