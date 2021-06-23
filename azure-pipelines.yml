@@ -50,7 +50,7 @@ stages:
         checkStyleRunAnalysis: true
         findBugsRunAnalysis: true
         
-    - bash: cd spring3hibernate && ls
+    - bash: cd spring3hibernate/target && ls
 
     - publish: spring3hibernate/target/*.war
       artifact: spring3hibernate
