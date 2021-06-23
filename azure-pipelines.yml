@@ -16,7 +16,6 @@ stages:
   - job: 'cloning'
     steps:
     - bash: git clone https://github.com/opstree/spring3hibernate.git
-    - bash: cd spring3hibernate && ls
     - task: Maven@3
       inputs:
         mavenPomFile: 'spring3hibernate/pom.xml'
@@ -50,17 +49,6 @@ stages:
         checkStyleRunAnalysis: true
         findBugsRunAnalysis: true
         
-    - bash: cd spring3hibernate/target && ls
-
     - publish: spring3hibernate/target/Spring3HibernateApp.war
       artifact: Spring3HibernateApp
     
-  # - job: 'cleaning'
-  #   steps:
-  #   - bash: ls
-
-# - stage: secound
-#   jobs:
-#   - job: check
-#     steps:
-#     - bash: ls
