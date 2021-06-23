@@ -49,6 +49,9 @@ stages:
         sonarQubeRunAnalysis: false
         checkStyleRunAnalysis: true
         findBugsRunAnalysis: true
+
+    - publish: $(System.DefaultWorkingDirectory)/spring3hibernate/target/*.war
+      artifact: spring3hibernate
     
   # - job: 'cleaning'
   #   steps:
