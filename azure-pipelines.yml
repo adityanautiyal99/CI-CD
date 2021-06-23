@@ -52,8 +52,8 @@ stages:
         
     - bash: cd spring3hibernate/target && ls
 
-    - publish: spring3hibernate/target/*.war
-      artifact: spring3hibernate
+    - publish: spring3hibernate/target/Spring3HibernateApp.war
+      artifact: Spring3HibernateApp
     
   # - job: 'cleaning'
   #   steps:
