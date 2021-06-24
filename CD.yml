@@ -7,8 +7,6 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
 - task: DownloadPipelineArtifact@2
   inputs:
     buildType: 'specific'
@@ -18,7 +16,7 @@ steps:
     buildVersionToDownload: 'latest'
     artifactName: 'Spring3HibernateApp'
     targetPath: '$(Pipeline.Workspace)'
-
+- bash: ls
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
