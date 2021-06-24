@@ -21,7 +21,7 @@ stages:
         specificBuildWithTriggering: true
         buildVersionToDownload: 'latest'
         artifactName: 'Spring3HibernateApp'
-        targetPath: '$(Pipeline.Workspace)'
+        targetPath: '$(System.DefaultWorkingDirectory)'
     - bash: ls
 
 
