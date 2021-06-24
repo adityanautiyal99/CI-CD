@@ -6,18 +6,26 @@
 pool:
   vmImage: ubuntu-latest
 
-steps:
-- task: DownloadPipelineArtifact@2
-  inputs:
-    buildType: 'specific'
-    project: 'e293d92f-195c-46e7-9d7d-034da48008d8'
-    definition: '12'
-    specificBuildWithTriggering: true
-    buildVersionToDownload: 'latest'
-    artifactName: 'Spring3HibernateApp'
-    targetPath: '$(Pipeline.Workspace)'
-- bash: ls
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+
+stages:
+- stage : first
+  displayName: Download spring3hibernate Artifact
+  jobs:
+  - job:
+    steps:
+    - task: DownloadPipelineArtifact@2
+      inputs:
+        buildType: 'specific'
+        project: 'e293d92f-195c-46e7-9d7d-034da48008d8'
+        definition: '12'
+        specificBuildWithTriggering: true
+        buildVersionToDownload: 'latest'
+        artifactName: 'Spring3HibernateApp'
+        targetPath: '$(Pipeline.Workspace)'
+    - bash: ls
+
+
+    - script: |
+        echo Add other tasks to build, test, and deploy your project.
+        echo See https://aka.ms/yaml
+      displayName: 'Run a multi-line script'
