@@ -12,8 +12,7 @@ stages:
   displayName: Download spring3hibernate Artifact
   jobs:
   - job:
-    steps:
-    
+    steps:    
     - task: DownloadPipelineArtifact@2
       inputs:
         buildType: 'specific'
