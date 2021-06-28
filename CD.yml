@@ -22,5 +22,6 @@ stages:
         buildVersionToDownload: 'latest'
         artifactName: 'Spring3HibernateApp'
         targetPath: '$(System.DefaultWorkingDirectory)'
+    - bash: ssh -i "adi.pem" ubuntu@ec2-18-116-32-144.us-east-2.compute.amazonaws.com
     - bash: scp Spring3HibernateApp.war ubuntu@18.118.51.233:/var/lib/tomcat9/webapps/ROOT/
 
