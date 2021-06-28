@@ -25,6 +25,6 @@ stages:
     - bash: ls
     - bash: chmod 400 adi.pem
     #- bash: ssh -t -t -i "adi.pem" ubuntu@18.116.32.144
-    - bash: scp -v  -r  -P 2222 -i adi.pem Spring3HibernateApp.war ubuntu@18.118.51.233:/var/lib/tomcat9/webapps/ROOT/
-    - bash: scp Spring3HibernateApp.war ubuntu@18.118.51.233:/var/lib/tomcat9/webapps/ROOT/
+    - bash: scp -v  -r  -P 2222 -i adi.pem Spring3HibernateApp.war ubuntu@3.12.102.118:/var/lib/tomcat9/webapps/ROOT/
+    #- bash: scp Spring3HibernateApp.war ubuntu@18.118.51.233:/var/lib/tomcat9/webapps/ROOT/
 
